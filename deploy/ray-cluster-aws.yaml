@@ -1,0 +1,67 @@
+# Autoscaling cloud cluster on AWS with Ray's cluster launcher.
+#
+#   pip install "ray[default]" boto3      # on your own computer
+#   aws configure                         # your AWS credentials
+#   ray up deploy/ray-cluster-aws.yaml    # creates the head node, ~5 minutes
+#   ray exec deploy/ray-cluster-aws.yaml "cd mathforge && mathforge run --config configs/cluster.yaml" --tmux
+#   ray attach deploy/ray-cluster-aws.yaml          # look around; `tmux attach` to watch
+#   ray rsync-down deploy/ray-cluster-aws.yaml mathforge/runs ./runs   # copy results home
+#   ray down deploy/ray-cluster-aws.yaml  # STOP PAYING when you are done
+#
+# Worker nodes are added automatically when MathForge asks for more CPUs/GPUs
+# than the cluster has, and removed after idle_timeout_minutes.
+# Costs money: check instance prices for your region before running.
+# The same structure works on GCP/Azure: see Ray's cluster-launcher docs.
+
+cluster_name: mathforge
+max_workers: 12
+idle_timeout_minutes: 10
+
+provider:
+  type: aws
+  region: us-west-2
+  cache_stopped_nodes: false
+
+auth:
+  ssh_user: ubuntu
+
+available_node_types:
+  head:
+    resources: {}
+    node_config:
+      InstanceType: m6i.2xlarge              # 8 vCPU, coordinates and verifies
+      # A Deep Learning AMI (Ubuntu) has CUDA drivers preinstalled. Look up the
+      # current AMI id for your region in the AWS console and put it here:
+      ImageId: ami-REPLACE_WITH_DEEP_LEARNING_AMI
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs: {VolumeSize: 200}
+  cpu_worker:
+    min_workers: 0
+    max_workers: 8
+    resources: {}
+    node_config:
+      InstanceType: c6i.8xlarge              # 32 vCPU for formula search and checking
+      ImageId: ami-REPLACE_WITH_DEEP_LEARNING_AMI
+      InstanceMarketOptions: {MarketType: spot}   # ~70% cheaper; MathForge tolerates lost workers
+  gpu_worker:
+    min_workers: 1
+    max_workers: 4
+    resources: {}
+    node_config:
+      InstanceType: g6e.xlarge               # 1x L40S 48 GB: fits a 7B model with vLLM
+      ImageId: ami-REPLACE_WITH_DEEP_LEARNING_AMI
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs: {VolumeSize: 200}
+
+head_node_type: head
+
+file_mounts:
+  /home/ubuntu/mathforge: .                 # syncs this project to every node
+
+setup_commands:
+  - python3 -m pip install --upgrade pip
+  - cd /home/ubuntu/mathforge && python3 -m pip install -e ".[cluster,llm,vllm]" matplotlib
+  # Lean on every node (only needed for verifier: lean):
+  # - cd /home/ubuntu/mathforge && bash scripts/setup_lean.sh /home/ubuntu/mathforge/lean_workspace

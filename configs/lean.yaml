@@ -1,0 +1,49 @@
+# Theorem proving in Lean 4 + Mathlib with a prover model.
+# One-time setup:   bash scripts/setup_lean.sh          (creates ./lean_workspace)
+#                   Windows: powershell -ExecutionPolicy Bypass -File scripts\setup_lean.ps1
+#                   pip install -e ".[llm,vllm]"
+# Then:             mathforge run --config configs/lean.yaml
+run:
+  dir: runs/lean
+  max_rounds: 0
+
+compute:
+  backend: local
+  workers: 8              # each worker runs one Lean+Mathlib process (~3-6 GB RAM): use about RAM_GB / 6
+
+engines:
+  constants:
+    enabled: false
+  laws:
+    enabled: false
+  selfplay:
+    enabled: true
+    verifier: lean
+    policy:
+      backend: vllm
+      # A 7B prover needs ~40 GB of GPU memory with vLLM (A100 / H100 / L40S).
+      model: deepseek-ai/DeepSeek-Prover-V2-7B
+      samples_per_problem: 16
+      temperature: 1.0
+      max_new_tokens: 4096
+      max_model_len: 8192
+    problems_per_round: 32
+    proposer_fraction: 0.2
+    train_every: 3
+    min_new_traces: 32
+    trainer:
+      lora_r: 32
+      max_len: 4096
+      batch_size: 2
+      grad_accum: 16
+    lean:
+      project_dir: lean_workspace
+      timeout_s: 300
+      # Add your own targets: a .jsonl with {"name", "statement"} or the miniF2F layout
+      # ({"name", "formal_statement", "split"}), a .lean file, or a directory of .lean
+      # files (PutnamBench). The built-in starter set is always included.
+      theorem_file: ""
+      theorem_split: ""      # e.g. "test" or "valid" for miniF2F
+      repair_samples: 2      # failed theorems get a fix attempt with Lean's error message
+      use_library: true      # proved theorems are offered as lemmas for later proofs
+      library_size: 3

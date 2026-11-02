@@ -1,0 +1,30 @@
+# systemd unit: run MathForge 24/7 on a Linux server, restart on failure,
+# start again after a reboot. Install:
+#
+#   sudo cp deploy/mathforge.service /etc/systemd/system/
+#   sudo nano /etc/systemd/system/mathforge.service      # fix the paths/user below
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now mathforge
+#   journalctl -u mathforge -f                            # watch it think
+#
+# Stopping (systemctl stop) sends SIGINT, so MathForge finishes its current
+# step and saves before exiting.
+
+[Unit]
+Description=MathForge self-improving mathematical discovery
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=YOUR_USER
+WorkingDirectory=/home/YOUR_USER/mathforge
+ExecStart=/home/YOUR_USER/mathforge/.venv/bin/mathforge run --config configs/laptop.yaml
+Restart=always
+RestartSec=30
+KillSignal=SIGINT
+TimeoutStopSec=900
+Nice=5
+
+[Install]
+WantedBy=multi-user.target

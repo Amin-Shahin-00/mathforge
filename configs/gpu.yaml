@@ -1,0 +1,40 @@
+# One machine with one or more NVIDIA GPUs (e.g. a cloud A10G / L4 / A100 / H100).
+#   pip install -e ".[llm,vllm]"
+#   mathforge run --config configs/gpu.yaml
+run:
+  dir: runs/gpu
+  max_rounds: 0
+
+compute:
+  backend: local          # CPU cores do verification; the GPU runs the model
+  workers: 0
+
+engines:
+  constants:
+    enabled: true
+    tasks_per_round: 32
+  laws:
+    enabled: true
+  selfplay:
+    enabled: true
+    verifier: sympy       # integrals, equations, sums: exact checks, no setup needed
+    policy:
+      backend: vllm
+      model: Qwen/Qwen2.5-Math-1.5B-Instruct     # 24 GB GPU is plenty; try the 7B on 40 GB+
+      samples_per_problem: 8
+      temperature: 0.8
+      max_new_tokens: 768
+      gpu_memory_utilization: 0.80
+    problems_per_round: 256
+    proposer_fraction: 0.25
+    train_every: 5
+    min_new_traces: 256
+    eval_every: 5
+    trainer:
+      algorithm: expert_iteration   # or grpo: RL with the verifier as reward, after a first SFT step
+      lora_r: 32
+      lr: 1.0e-4
+      epochs: 1
+      batch_size: 8
+      grad_accum: 4
+      max_len: 1536

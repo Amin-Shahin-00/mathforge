@@ -1,0 +1,43 @@
+# Many computers (your own machines or cloud VMs) joined into a Ray cluster.
+#
+#   on the head machine:     ray start --head --port=6379
+#   on every other machine:  ray start --address=<head-ip>:6379
+#   then, on the head:       mathforge run --config configs/cluster.yaml
+#
+# CPU work (formula search, verification) spreads over every core of every
+# machine. The model gets one copy per GPU and prompts are sharded across them.
+# For a cloud autoscaling cluster use deploy/ray-cluster-aws.yaml instead.
+run:
+  dir: runs/cluster
+  max_rounds: 0
+
+compute:
+  backend: ray
+  ray_address: auto
+  ray_max_retries: 3              # a task lost with its machine is re-run elsewhere this often
+
+engines:
+  constants:
+    enabled: true
+    tasks_per_round: 512          # scale with total cores
+    candidates_per_task: 400
+    mitm_coeff: 8
+  laws:
+    enabled: true
+    tasks_per_round: 64
+    population: 1000
+    generations: 120
+  selfplay:
+    enabled: true
+    verifier: sympy               # switch to "lean" after running scripts/setup_lean.sh on every node
+    policy:
+      backend: vllm
+      model: Qwen/Qwen2.5-Math-7B-Instruct
+      tensor_parallel: 1
+      samples_per_problem: 16
+      max_new_tokens: 1024
+    problems_per_round: 2048
+    train_every: 3
+    min_new_traces: 1024
+    trainer:
+      max_len: 2048

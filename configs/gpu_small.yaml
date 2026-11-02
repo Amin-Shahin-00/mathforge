@@ -1,0 +1,44 @@
+# One consumer GPU with 6-8 GB (RTX 2060/3060/4060, laptop GPUs), any OS.
+# Uses the transformers backend (vLLM is Linux-only); slower, but runs anywhere torch does.
+#   pip install -e ".[llm]"   (with a CUDA build of torch, see README)
+#   mathforge run --config configs/gpu_small.yaml
+# Older GPUs without native bf16 (RTX 20xx, T4) run the model in fp16 automatically.
+run:
+  dir: runs/gpu_small
+  max_rounds: 0
+
+compute:
+  backend: local          # CPU cores verify answers and run the CPU engines
+  workers: 0
+
+engines:
+  constants:
+    enabled: true
+    tasks_per_round: 16
+  laws:
+    enabled: true
+  selfplay:
+    enabled: true
+    verifier: sympy
+    policy:
+      backend: hf
+      model: Qwen/Qwen2.5-Math-1.5B-Instruct
+      samples_per_problem: 4
+      temperature: 0.8
+      max_new_tokens: 512
+      batch_size: 4
+    problems_per_round: 32
+    proposer_fraction: 0.25
+    train_every: 5
+    min_new_traces: 64
+    eval_every: 5
+    eval_levels: [1, 3, 5, 7, 9]
+    eval_per_level: 2
+    trainer:
+      lora_r: 16
+      lora_alpha: 32
+      lr: 1.0e-4
+      epochs: 1
+      batch_size: 1         # 6 GB: one sequence at a time ...
+      grad_accum: 8         # ... accumulated to an effective batch of 8
+      max_len: 768

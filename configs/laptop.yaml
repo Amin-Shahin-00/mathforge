@@ -1,0 +1,22 @@
+# Runs on any computer, no GPU needed. Uses every CPU core.
+#   mathforge run --config configs/laptop.yaml
+run:
+  dir: runs/laptop
+  max_rounds: 0          # 0 = run forever; stop with Ctrl+C and resume any time
+
+compute:
+  backend: local
+  workers: 0             # 0 = all cores
+
+engines:
+  constants:
+    enabled: true
+    tasks_per_round: 32
+    candidates_per_task: 400
+  laws:
+    enabled: true
+    tasks_per_round: 8
+    fit_constants: true  # free numeric constants fitted inside formulas (finds 9.81 in Bernoulli)
+    units: true          # dimensional analysis for the benchmark laws and datasets with units
+  selfplay:
+    enabled: false       # needs a GPU; see configs/gpu.yaml

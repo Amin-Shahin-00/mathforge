@@ -1,0 +1,22 @@
+{"name": "add_comm_nat", "statement": "theorem add_comm_nat (a b : ℕ) : a + b = b + a"}
+{"name": "prime_101", "statement": "theorem prime_101 : Nat.Prime 101"}
+{"name": "sq_shift_nonneg", "statement": "theorem sq_shift_nonneg (x : ℝ) : 0 ≤ x ^ 2 - 2 * x + 1"}
+{"name": "two_mul_le_sq_add_sq", "statement": "theorem two_mul_le_sq_add_sq (a b : ℝ) : 2 * a * b ≤ a ^ 2 + b ^ 2"}
+{"name": "abs_triangle", "statement": "theorem abs_triangle (a b : ℝ) : |a + b| ≤ |a| + |b|"}
+{"name": "x_add_inv_ge_two", "statement": "theorem x_add_inv_ge_two (x : ℝ) (hx : 0 < x) : 2 ≤ x + 1 / x"}
+{"name": "sum_sq_ge_sum_prod", "statement": "theorem sum_sq_ge_sum_prod (a b c : ℝ) : a * b + b * c + c * a ≤ a ^ 2 + b ^ 2 + c ^ 2"}
+{"name": "nat_sq_mod_four", "statement": "theorem nat_sq_mod_four (n : ℕ) : n ^ 2 % 4 = 0 ∨ n ^ 2 % 4 = 1"}
+{"name": "three_dvd_cube_sub", "statement": "theorem three_dvd_cube_sub (n : ℤ) : 3 ∣ n ^ 3 - n"}
+{"name": "six_dvd_consecutive", "statement": "theorem six_dvd_consecutive (n : ℕ) : 6 ∣ n * (n + 1) * (n + 2)"}
+{"name": "sum_odd_eq_sq", "statement": "theorem sum_odd_eq_sq (n : ℕ) : ∑ i ∈ Finset.range n, (2 * i + 1) = n ^ 2"}
+{"name": "gauss_sum", "statement": "theorem gauss_sum (n : ℕ) : 2 * ∑ i ∈ Finset.range (n + 1), i = n * (n + 1)"}
+{"name": "cauchy_schwarz_two", "statement": "theorem cauchy_schwarz_two (a b c d : ℝ) : (a * c + b * d) ^ 2 ≤ (a ^ 2 + b ^ 2) * (c ^ 2 + d ^ 2)"}
+{"name": "add_one_le_exp'", "statement": "theorem add_one_le_exp' (x : ℝ) : x + 1 ≤ Real.exp x"}
+{"name": "sqrt_two_irrational", "statement": "theorem sqrt_two_irrational : Irrational (Real.sqrt 2)"}
+{"name": "infinitely_many_primes", "statement": "theorem infinitely_many_primes (n : ℕ) : ∃ p, n ≤ p ∧ Nat.Prime p"}
+{"name": "sum_two_sq_mod_four", "statement": "theorem sum_two_sq_mod_four (a b : ℤ) : (a ^ 2 + b ^ 2) % 4 ≠ 3"}
+{"name": "fib_lt_two_pow", "statement": "theorem fib_lt_two_pow (n : ℕ) : Nat.fib n < 2 ^ n"}
+{"name": "amgm_three", "statement": "theorem amgm_three (a b c : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) : 27 * (a * b * c) ≤ (a + b + c) ^ 3"}
+{"name": "fermat_little_seven", "statement": "theorem fermat_little_seven (a : ℤ) : 7 ∣ a ^ 7 - a"}
+{"name": "sum_cubes", "statement": "theorem sum_cubes (n : ℕ) : 4 * ∑ i ∈ Finset.range (n + 1), i ^ 3 = (n * (n + 1)) ^ 2"}
+{"name": "bernoulli_ineq", "statement": "theorem bernoulli_ineq (x : ℝ) (hx : -1 ≤ x) (n : ℕ) : 1 + n * x ≤ (1 + x) ^ n"}

@@ -1,0 +1,122 @@
+2026-10-23 12:07:16  MathForge starting at round 1 | engines: constants, laws | compute: local x2 | run dir: runs/demo_final
+2026-10-23 12:07:29  [round 1] constants new_discoveries=10  verified=10  tested=12800  level=1  errors=0  seconds=13.67
+2026-10-23 12:07:30  [round 1] laws      new_discoveries=6  solved=8  laws_solved_total=5  library_size=3  level=2  errors=0  seconds=0.64
+2026-10-23 12:07:30  [round 1] done in 14.3s | knowledge base: 16 verified results
+2026-10-23 12:07:35  [round 2] constants new_discoveries=5  verified=5  tested=3580  level=2  errors=0  seconds=5.56
+2026-10-23 12:07:36  [round 2] laws      new_discoveries=2  solved=8  laws_solved_total=6  library_size=4  level=2  errors=0  seconds=0.3
+2026-10-23 12:07:36  [round 2] done in 5.9s | knowledge base: 23 verified results
+2026-10-23 12:07:49  [round 3] constants new_discoveries=0  verified=0  tested=11361  level=2  errors=0  seconds=13.21
+2026-10-23 12:07:51  [round 3] laws      new_discoveries=2  solved=7  laws_solved_total=7  library_size=5  level=3  errors=0  seconds=2.22
+2026-10-23 12:07:51  [round 3] done in 15.4s | knowledge base: 25 verified results
+2026-10-23 12:08:03  [round 4] constants new_discoveries=0  verified=0  tested=8611  level=2  errors=0  seconds=11.8
+2026-10-23 12:08:05  [round 4] laws      new_discoveries=3  solved=7  laws_solved_total=10  library_size=7  level=3  errors=0  seconds=2.16
+2026-10-23 12:08:05  [round 4] done in 14.0s | knowledge base: 28 verified results
+2026-10-23 12:08:15  [round 5] constants new_discoveries=1  verified=1  tested=6689  level=2  errors=0  seconds=9.51
+2026-10-23 12:08:19  [round 5] laws      new_discoveries=3  solved=5  laws_solved_total=11  library_size=9  level=3  errors=0  seconds=4.06
+2026-10-23 12:08:19  [round 5] done in 14.1s | knowledge base: 32 verified results
+2026-10-23 12:08:30  [round 6] constants new_discoveries=1  verified=1  tested=7737  level=2  errors=0  seconds=10.38
+2026-10-23 12:08:35  [round 6] laws      new_discoveries=1  solved=4  laws_solved_total=12  library_size=10  level=3  errors=0  seconds=5.85
+2026-10-23 12:08:35  [round 6] done in 16.2s | knowledge base: 34 verified results
+2026-10-23 12:08:46  [round 7] constants new_discoveries=1  verified=1  tested=7675  level=2  errors=0  seconds=10.1
+2026-10-23 12:08:48  [round 7] laws      new_discoveries=1  solved=7  laws_solved_total=12  library_size=10  level=3  errors=0  seconds=2.79
+2026-10-23 12:08:48  [round 7] done in 12.9s | knowledge base: 36 verified results
+2026-10-23 12:08:57  [round 8] constants new_discoveries=0  verified=0  tested=6389  level=3  errors=0  seconds=8.49
+2026-10-23 12:09:00  [round 8] laws      new_discoveries=0  solved=6  laws_solved_total=12  library_size=11  level=3  errors=0  seconds=3.05
+2026-10-23 12:09:00  [round 8] done in 11.5s | knowledge base: 36 verified results
+2026-10-23 12:09:13  [round 9] constants new_discoveries=3  verified=3  tested=11751  level=3  errors=0  seconds=13.49
+2026-10-23 12:09:14  [round 9] laws      new_discoveries=3  solved=8  laws_solved_total=13  library_size=13  level=4  errors=0  seconds=0.46
+2026-10-23 12:09:14  [round 9] done in 14.0s | knowledge base: 42 verified results
+2026-10-23 12:09:28  [round 10] constants new_discoveries=2  verified=2  tested=11323  level=3  errors=0  seconds=13.75
+2026-10-23 12:09:38  [round 10] laws      new_discoveries=0  solved=0  laws_solved_total=13  library_size=13  level=4  errors=0  seconds=10.1
+2026-10-23 12:09:38  [round 10] done in 24.1s | knowledge base: 44 verified results
+2026-10-23 12:09:50  [round 11] constants new_discoveries=0  verified=0  tested=10668  level=3  errors=0  seconds=12.01
+2026-10-23 12:09:59  [round 11] laws      new_discoveries=2  solved=2  laws_solved_total=14  library_size=13  level=4  errors=0  seconds=9.12
+2026-10-23 12:09:59  [round 11] done in 21.1s | knowledge base: 46 verified results
+2026-10-23 12:10:13  [round 12] constants new_discoveries=1  verified=1  tested=12000  level=3  errors=0  seconds=13.63
+2026-10-23 12:10:23  [round 12] laws      new_discoveries=0  solved=1  laws_solved_total=14  library_size=13  level=3  errors=0  seconds=9.88
+2026-10-23 12:10:23  [round 12] done in 23.5s | knowledge base: 47 verified results
+2026-10-23 12:10:37  [round 13] constants new_discoveries=1  verified=1  tested=12126  level=3  errors=0  seconds=13.93
+2026-10-23 12:10:37  [round 13] laws      new_discoveries=1  solved=8  laws_solved_total=14  library_size=13  level=3  errors=0  seconds=0.34
+2026-10-23 12:10:37  [round 13] done in 14.3s | knowledge base: 49 verified results
+2026-10-23 12:10:50  [round 14] constants new_discoveries=1  verified=1  tested=11020  level=3  errors=0  seconds=13.3
+2026-10-23 12:10:51  [round 14] laws      new_discoveries=0  solved=8  laws_solved_total=14  library_size=13  level=4  errors=0  seconds=0.38
+2026-10-23 12:10:51  [round 14] done in 13.7s | knowledge base: 50 verified results
+2026-10-23 12:11:04  [round 15] constants new_discoveries=2  verified=2  tested=10740  level=3  errors=0  seconds=13.26
+2026-10-23 12:11:09  [round 15] laws      new_discoveries=1  solved=5  laws_solved_total=15  library_size=14  level=4  errors=0  seconds=5.21
+2026-10-23 12:11:09  [round 15] done in 18.7s | knowledge base: 53 verified results
+2026-10-23 12:11:23  [round 16] constants new_discoveries=1  verified=1  tested=11601  level=3  errors=0  seconds=13.97
+2026-10-23 12:11:26  [round 16] laws      new_discoveries=2  solved=7  laws_solved_total=15  library_size=14  level=4  errors=0  seconds=2.36
+2026-10-23 12:11:26  [round 16] done in 16.3s | knowledge base: 56 verified results
+2026-10-23 12:11:40  [round 17] constants new_discoveries=1  verified=1  tested=11705  level=3  errors=0  seconds=14.43
+2026-10-23 12:11:43  [round 17] laws      new_discoveries=0  solved=7  laws_solved_total=15  library_size=14  level=5  errors=0  seconds=2.58
+2026-10-23 12:11:43  [round 17] done in 17.0s | knowledge base: 57 verified results
+2026-10-23 12:11:58  [round 18] constants new_discoveries=0  verified=0  tested=12098  level=3  errors=0  seconds=15.74
+2026-10-23 12:12:06  [round 18] laws      new_discoveries=0  solved=3  laws_solved_total=15  library_size=14  level=5  errors=0  seconds=7.33
+2026-10-23 12:12:06  [round 18] done in 23.1s | knowledge base: 57 verified results
+2026-10-23 12:12:21  [round 19] constants new_discoveries=0  verified=0  tested=12169  level=3  errors=0  seconds=15.38
+2026-10-23 12:12:27  [round 19] laws      new_discoveries=3  solved=3  laws_solved_total=17  library_size=15  level=5  errors=0  seconds=5.75
+2026-10-23 12:12:27  [round 19] done in 21.1s | knowledge base: 60 verified results
+2026-10-23 12:12:41  [round 20] constants new_discoveries=0  verified=0  tested=11114  level=4  errors=0  seconds=14.25
+2026-10-23 12:12:46  [round 20] laws      new_discoveries=2  solved=5  laws_solved_total=17  library_size=15  level=5  errors=0  seconds=5.3
+2026-10-23 12:12:47  [round 20] done in 19.8s | knowledge base: 62 verified results
+2026-10-23 12:13:03  [round 21] constants new_discoveries=0  verified=0  tested=12400  level=4  errors=0  seconds=16.71
+2026-10-23 12:13:11  [round 21] laws      new_discoveries=0  solved=3  laws_solved_total=17  library_size=15  level=5  errors=0  seconds=7.61
+2026-10-23 12:13:11  [round 21] done in 24.3s | knowledge base: 62 verified results
+2026-10-23 12:13:25  [round 22] constants new_discoveries=1  verified=1  tested=12089  level=4  errors=0  seconds=14.19
+2026-10-23 12:13:35  [round 22] laws      new_discoveries=1  solved=1  laws_solved_total=17  library_size=15  level=5  errors=0  seconds=9.68
+2026-10-23 12:13:35  [round 22] done in 23.9s | knowledge base: 64 verified results
+2026-10-23 12:13:47  [round 23] constants new_discoveries=0  verified=0  tested=11212  level=4  errors=0  seconds=11.88
+2026-10-23 12:13:53  [round 23] laws      new_discoveries=0  solved=2  laws_solved_total=17  library_size=15  level=5  errors=0  seconds=6.75
+2026-10-23 12:13:53  [round 23] done in 18.6s | knowledge base: 64 verified results
+2026-10-23 12:14:07  [round 24] constants new_discoveries=0  verified=0  tested=11672  level=4  errors=0  seconds=13.38
+2026-10-23 12:14:14  [round 24] laws      new_discoveries=1  solved=3  laws_solved_total=17  library_size=15  level=5  errors=0  seconds=7.49
+2026-10-23 12:14:14  [round 24] done in 20.9s | knowledge base: 65 verified results
+2026-10-23 12:14:29  [round 25] constants new_discoveries=1  verified=1  tested=11600  level=4  errors=0  seconds=14.29
+2026-10-23 12:14:38  [round 25] laws      new_discoveries=0  solved=1  laws_solved_total=17  library_size=15  level=4  errors=0  seconds=9.21
+2026-10-23 12:14:38  [round 25] done in 23.7s | knowledge base: 66 verified results
+2026-10-23 12:14:52  [round 26] constants new_discoveries=0  verified=0  tested=11174  level=4  errors=0  seconds=13.91
+2026-10-23 12:14:55  [round 26] laws      new_discoveries=0  solved=7  laws_solved_total=17  library_size=15  level=4  errors=0  seconds=3.19
+2026-10-23 12:14:55  [round 26] done in 17.1s | knowledge base: 66 verified results
+2026-10-23 12:15:09  [round 27] constants new_discoveries=0  verified=0  tested=11351  level=4  errors=0  seconds=13.65
+2026-10-23 12:15:12  [round 27] laws      new_discoveries=3  solved=7  laws_solved_total=17  library_size=18  level=4  errors=0  seconds=2.88
+2026-10-23 12:15:12  [round 27] done in 16.5s | knowledge base: 69 verified results
+2026-10-23 12:15:26  [round 28] constants new_discoveries=0  verified=0  tested=11285  level=5  errors=0  seconds=13.88
+2026-10-23 12:15:28  [round 28] laws      new_discoveries=0  solved=8  laws_solved_total=17  library_size=18  level=5  errors=0  seconds=1.99
+2026-10-23 12:15:28  [round 28] done in 15.9s | knowledge base: 69 verified results
+2026-10-23 12:15:42  [round 29] constants new_discoveries=0  verified=0  tested=12000  level=5  errors=0  seconds=14.33
+2026-10-23 12:15:48  [round 29] laws      new_discoveries=1  solved=3  laws_solved_total=18  library_size=19  level=5  errors=0  seconds=6.01
+2026-10-23 12:15:48  [round 29] done in 20.3s | knowledge base: 70 verified results
+2026-10-23 12:16:01  [round 30] constants new_discoveries=0  verified=0  tested=11655  level=5  errors=0  seconds=13.33
+2026-10-23 12:16:09  [round 30] laws      new_discoveries=0  solved=1  laws_solved_total=18  library_size=19  level=5  errors=0  seconds=8.13
+2026-10-23 12:16:10  [round 30] done in 21.7s | knowledge base: 70 verified results
+2026-10-23 12:16:25  [round 31] constants new_discoveries=0  verified=0  tested=12400  level=6  errors=0  seconds=14.96
+2026-10-23 12:16:33  [round 31] laws      new_discoveries=0  solved=2  laws_solved_total=18  library_size=19  level=5  errors=0  seconds=8.23
+2026-10-23 12:16:33  [round 31] done in 23.2s | knowledge base: 70 verified results
+2026-10-23 12:16:47  [round 32] constants new_discoveries=0  verified=0  tested=12001  level=6  errors=0  seconds=14.32
+2026-10-23 12:16:54  [round 32] laws      new_discoveries=0  solved=2  laws_solved_total=18  library_size=19  level=5  errors=0  seconds=7.23
+2026-10-23 12:16:54  [round 32] done in 21.6s | knowledge base: 70 verified results
+2026-10-23 12:17:08  [round 33] constants new_discoveries=0  verified=0  tested=12136  level=6  errors=0  seconds=13.73
+2026-10-23 12:17:17  [round 33] laws      new_discoveries=1  solved=1  laws_solved_total=18  library_size=19  level=4  errors=0  seconds=9.36
+2026-10-23 12:17:17  [round 33] done in 23.1s | knowledge base: 71 verified results
+2026-10-23 12:17:33  [round 34] constants new_discoveries=0  verified=0  tested=12473  level=7  errors=0  seconds=15.45
+2026-10-23 12:17:36  [round 34] laws      new_discoveries=0  solved=7  laws_solved_total=18  library_size=19  level=4  errors=0  seconds=2.68
+2026-10-23 12:17:36  [round 34] done in 18.1s | knowledge base: 71 verified results
+2026-10-23 12:17:50  [round 35] constants new_discoveries=1  verified=1  tested=11737  level=7  errors=0  seconds=14.11
+2026-10-23 12:17:53  [round 35] laws      new_discoveries=0  solved=6  laws_solved_total=18  library_size=19  level=4  errors=0  seconds=2.83
+2026-10-23 12:17:53  [round 35] done in 17.2s | knowledge base: 72 verified results
+2026-10-23 12:18:07  [round 36] constants new_discoveries=1  verified=1  tested=11751  level=7  errors=0  seconds=13.83
+2026-10-23 12:18:10  [round 36] laws      new_discoveries=0  solved=6  laws_solved_total=18  library_size=19  level=4  errors=0  seconds=2.83
+2026-10-23 12:18:10  [round 36] done in 16.7s | knowledge base: 73 verified results
+2026-10-23 12:18:24  [round 37] constants new_discoveries=0  verified=0  tested=12400  level=7  errors=0  seconds=14.61
+2026-10-23 12:18:27  [round 37] laws      new_discoveries=1  solved=6  laws_solved_total=18  library_size=19  level=5  errors=0  seconds=2.61
+2026-10-23 12:18:27  [round 37] done in 17.2s | knowledge base: 74 verified results
+2026-10-23 12:18:41  [round 38] constants new_discoveries=0  verified=0  tested=12000  level=7  errors=0  seconds=14.42
+2026-10-23 12:18:49  [round 38] laws      new_discoveries=1  solved=2  laws_solved_total=19  library_size=21  level=5  errors=0  seconds=8.07
+2026-10-23 12:18:49  [round 38] done in 22.5s | knowledge base: 75 verified results
+2026-10-23 12:19:03  [round 39] constants new_discoveries=0  verified=0  tested=12800  level=8  errors=0  seconds=14.22
+2026-10-23 12:19:12  [round 39] laws      new_discoveries=0  solved=1  laws_solved_total=19  library_size=21  level=5  errors=0  seconds=8.39
+2026-10-23 12:19:12  [round 39] done in 22.6s | knowledge base: 75 verified results
+2026-10-23 12:19:25  [round 40] constants new_discoveries=0  verified=0  tested=12138  level=8  errors=0  seconds=13.27
+2026-10-23 12:19:34  [round 40] laws      new_discoveries=1  solved=1  laws_solved_total=19  library_size=21  level=4  errors=0  seconds=8.61
+2026-10-23 12:19:34  [round 40] done in 22.2s | knowledge base: 76 verified results
+2026-10-23 12:19:34  Saved. Resume any time with the same command. Report: runs/demo_final/discoveries.md
